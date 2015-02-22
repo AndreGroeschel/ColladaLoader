@@ -45,6 +45,15 @@ public:
 	DaeReader();
 	virtual ~DaeReader();
 
+	/**
+	* Sets the top meta object.
+	* Called by @c dae::setIOPlugin() when the IO plugin changes. It passes to this function the
+	* top meta object, which is the root of a
+	* hierarchy of @c daeMetaElement objects. This top meta object is capable of creating
+	* any of the root objects in the DOM tree.
+	* @param topMeta Top meta object to use to create objects to fill the database.
+	* @return Returns DAE_OK if successful, otherwise returns a negative value defined in daeError.h.
+	*/
 	void load(const std::string& path);
 
 private:
