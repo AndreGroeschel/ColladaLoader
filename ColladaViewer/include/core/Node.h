@@ -29,7 +29,9 @@ THE SOFTWARE.
 
 namespace ColladaLoader
 {
-//Node uses Decorator pattern for dynamic behavior injection
+/**
+* The @c Node class describes a single scene element. Uses Decorator pattern for dynamic behavior injection
+*/
 class Node
 {
 public:

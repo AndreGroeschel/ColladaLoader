@@ -82,11 +82,14 @@ bool DaeDocument::load(domCOLLADA* colladaDocument)
 			{
 			case UPAXISTYPE_X_UP:
 				assetUpAxis_ = UP_AXIS_X;
+				break;
 			case UPAXISTYPE_Z_UP:
 				assetUpAxis_ = UP_AXIS_Z;
+				break;
 			case UPAXISTYPE_Y_UP:
 			case UPAXISTYPE_COUNT:
 				assetUpAxis_ = UP_AXIS_Y;
+				break;
 			}
 		}
 	}

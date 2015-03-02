@@ -32,10 +32,8 @@ THE SOFTWARE.
 namespace ColladaLoader
 {
 /**
- * Singleton
- *
- * SceneReader reads elements and delegates them to each reader
- */
+* The @c SceneReader class reads a visual scene defined in the DOM and processes all of its nodes
+*/
 
 class SceneReader: public Singleton<SceneReader>
 {
@@ -43,12 +41,31 @@ public:
 	SceneReader();
 	virtual ~SceneReader();
 
+	/**
+	 * Reads the visual scene
+	*/
 	void readVisualScene(void);
+	/**
+	 * Reads the visual scene
+	 * @param scene Reference to a dom visual scene
+	*/
 	void readVisualScene(domVisual_sceneRef scene);
-
+	/**
+	 * Reads a visual node
+	 * @param refNode Reference to the dom node
+	 * @param parentNode The node's parent node
+	*/
 	Node* readVisualNode(domNodeRef refNode, Node* parentNode);
+	/**
+	 * Reads mesh data and materials
+	 * @param instanceGeo Instance of the geometry
+	 * @param parentNode The node to which the geometry and material gets added
+	*/
 	void processInstanceGeometry(domInstance_geometry* instanceGeo, Node* parentNode);
-
+	/**
+	 * Sets the dom's visual scene
+	 * @param scene Reference to the visual scene
+	*/
 	void setVisualScene(domVisual_sceneRef scene);
 
 	static SceneReader& getSingleton(void);

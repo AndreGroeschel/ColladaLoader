@@ -34,7 +34,7 @@ namespace ColladaLoader
 
 Mesh::Mesh() :
 	meshType_(MT_NO_TYPE), pointCount_(0), vertexCount_(0), normalCount_(0),
-			texCoordCount_(0), materialBindingID_("")
+			texCoordCount_(0), materialBindingID_(""), colorCount_(0)
 {
 }
 

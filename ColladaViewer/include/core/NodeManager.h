@@ -30,6 +30,9 @@ THE SOFTWARE.
 
 namespace ColladaLoader
 {
+/**
+* The @c NodeManager provides a central access point for adding, retrieving and removing nodes
+*/
 class NodeManager: public Singleton<NodeManager>
 {
 public:

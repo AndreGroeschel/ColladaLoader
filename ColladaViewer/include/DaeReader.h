@@ -35,9 +35,7 @@ namespace ColladaLoader
 {
 
 /**
-* The @c daeIOPlugin class provides the input/output plugin interface, which is
-* the interface between the COLLADA runtime and the backend storage. A native
-* COLLADA XML plugin implementation is provided along with this interface.
+* The @c DaeReader reads a Digital Asset Exchange file
 */
 class DaeReader
 {
@@ -46,12 +44,8 @@ public:
 	virtual ~DaeReader();
 
 	/**
-	* Sets the top meta object.
-	* Called by @c dae::setIOPlugin() when the IO plugin changes. It passes to this function the
-	* top meta object, which is the root of a
-	* hierarchy of @c daeMetaElement objects. This top meta object is capable of creating
-	* any of the root objects in the DOM tree.
-	* @param topMeta Top meta object to use to create objects to fill the database.
+	* Loads a DAE document
+	* @param path The path where the dae file resides
 	* @return Returns DAE_OK if successful, otherwise returns a negative value defined in daeError.h.
 	*/
 	void load(const std::string& path);

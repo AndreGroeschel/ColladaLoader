@@ -33,8 +33,8 @@ namespace ColladaLoader
 {
 
 /**
- * Singleton + Proxy Pattern
- */
+* The @c DaeDocument loads the Collada DOM and provides access to the scene
+*/
 
 class DaeDocument: public Singleton<DaeDocument>
 {
@@ -49,14 +49,34 @@ public:
 	DaeDocument();
 	virtual ~DaeDocument();
 
+	/**
+	* Loads the Collada DOM
+	* @param colladaDocument Pointer to the collada document
+	* @return Returns true if loading was successful, otherwise returns false
+	*/
 	bool load(domCOLLADA* colladaDocument);
-	void readGeometry(void);
 
+	/**
+	* Gets the value of the meter property
+	* @return Returns the unit scale (1 is 1 meter)
+	*/
 	float getAssetUnitMeter() const;
+
+	/**
+	* Retrieves which axis is pointing upwards
+	* @return Returns the up axis
+	*/
 	UpAxis getAssetUpAxis() const;
 
+	/**
+	* Gets a reference to the visual scene defined in the DOM
+	* @return Returns a reference the visual scene
+	*/
 	domVisual_sceneRef getVisualScene(void);
 
+	/**
+	* Prints information who authored the asset and which authoring tool has been used
+	*/
 	void printAssetInformation(void);
 
 	static DaeDocument& getSingleton(void);

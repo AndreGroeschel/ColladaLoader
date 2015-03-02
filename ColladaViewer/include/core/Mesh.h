@@ -30,6 +30,9 @@ THE SOFTWARE.
 
 namespace ColladaLoader
 {
+/**
+* The @c Mesh class holds information about geometry
+*/
 class Mesh
 {
 public:

@@ -32,6 +32,7 @@ class IComponentRenderer
 {
 public:
 	virtual void render(double timeElapsed)=0;
+	virtual ~IComponentRenderer(){};
 };
 
 

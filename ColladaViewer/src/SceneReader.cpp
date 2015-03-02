@@ -100,8 +100,7 @@ Node* SceneReader::readVisualNode(domNodeRef refNode, Node* parentNode)
 	node->setParent(parentNode);
 	parentNode->addChild(node);
 
-	//TODO: transformations
-	//TODO: process geometries
+
 	domInstance_geometry_Array geometryInstances =
 			refNode->getInstance_geometry_array();
 	for (size_t i = 0; i < geometryInstances.getCount(); i++)

@@ -30,6 +30,9 @@ THE SOFTWARE.
 
 namespace ColladaLoader
 {
+/**
+* The @c Component class provides the base for extending behavior of nodes
+*/
 class Component : public boost::enable_shared_from_this<Component>
 {
 public:
